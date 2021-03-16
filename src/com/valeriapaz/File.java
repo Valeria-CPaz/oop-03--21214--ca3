@@ -4,7 +4,7 @@ package com.valeriapaz;
 public interface File {
 
 void addGame();
-void getGame();
+void createTextFile(String _fileName);
 void openFile();
 void closeFile();
 void readFile(String _fileName);

@@ -9,28 +9,33 @@ public class FileManager extends Games implements File {
     private static Formatter output;
     private static String fileName = "gameTracker.txt";
 
-    public FileManager(String name, String studio) {
+    public FileManager(String name, String studio, int yearReleased, boolean haveIPlayed) {
         this.name = name;
         this.studio = studio;
+        this.yearReleased = yearReleased;
+        this.haveIPlayed = haveIPlayed;
+
+    }
+
+    @Override
+    public void createTextFile(String _fileName) {
+        fileName = _fileName;
+        openFile();
+        addGame();
+        closeFile();
 
     }
 
     private void readGames() {
 
-
     }
+
 
     @Override
     public void addGame() {
-
-        output.format("Name: %s | Studio: %s %n", "The Witcher 3", "Project Red");
-
+        output.format("Name: %s | Studio: %s | Year Released: %s | Played: %b %n", name, studio, yearReleased, haveIPlayed);
     }
 
-    @Override
-    public void getGame() {
-
-    }
 
     @Override
     public void openFile() {

@@ -5,7 +5,7 @@ abstract class Games {
 
     public String name;
     public String studio;
-    public String yearReleased;
+    public int yearReleased;
     public boolean haveIPlayed;
 
 }
