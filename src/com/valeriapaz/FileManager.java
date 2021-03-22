@@ -40,7 +40,7 @@ public class FileManager extends Games implements File {
     @Override
     public void openFile() {
 
-        // Feature: Use of Exception
+        // Feature: Use of Exceptions
         try {
             output = new Formatter(fileName);
         } catch (SecurityException securityException) {
